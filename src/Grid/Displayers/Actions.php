@@ -145,9 +145,9 @@ class Actions extends AbstractDisplayer
     protected function renderView()
     {
         return <<<EOT
-<a href="{$this->getResource()}/{$this->getKey()}">
-    <i class="fa fa-eye"></i>
-</a>
+<a href="{$this->getResource()}/{$this->getKey()}" >
+    <span class="fa fa-calendar" style="color: #3c8dbc;"></span> <span style="color: #1e282c">查看</span>
+</a>&nbsp;&nbsp;
 EOT;
     }
 
@@ -160,8 +160,8 @@ EOT;
     {
         return <<<EOT
 <a href="{$this->getResource()}/{$this->getKey()}/edit">
-    <i class="fa fa-edit"></i>
-</a>
+	<span class="fa fa-pencil" style="color: #f39c12;"></span> <span style="color: #1e282c">编辑</span>
+</a>&nbsp;&nbsp;      
 EOT;
     }
 
@@ -225,7 +225,7 @@ SCRIPT;
 
         return <<<EOT
 <a href="javascript:void(0);" data-id="{$this->getKey()}" class="{$this->grid->getGridRowName()}-delete">
-    <i class="fa fa-trash"></i>
+    <i class="fa fa-trash" style="color: #d73925;"></i> <span style="color: #1e282c">删除</span>
 </a>
 EOT;
     }
